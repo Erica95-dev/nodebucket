@@ -1,3 +1,11 @@
+/*
+Title: Nodebucket
+Author: Erica Perry
+Date:03/20/21
+Description: nosql data structure
+*/
+
+
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
