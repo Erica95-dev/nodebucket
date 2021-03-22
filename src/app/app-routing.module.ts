@@ -1,3 +1,11 @@
+/*
+Title: Nodebucket
+Author: Erica Perry
+Date:03/20/21
+Description: app-routing.modules.ts
+*/
+
+/* imports uses throughout */
 import { HomeComponent } from './pages/home/home.component';
 import { BaseLayoutComponent } from './shared/base-layout/base-layout.component';
 import { NgModule } from '@angular/core';
@@ -7,6 +15,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { AuthGuard } from './auth.guard';
 
 
+/* creating my routes and added children routes */
 const routes: Routes = [
   {
     path: '',
