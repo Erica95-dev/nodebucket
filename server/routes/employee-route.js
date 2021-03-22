@@ -1,3 +1,10 @@
+/*
+Title: Nodebucket
+Author: Erica Perry
+Date:03/20/21
+Description: employee.js
+*/
+
 const express = require('express');
 const Employee = require("../employee");
 
