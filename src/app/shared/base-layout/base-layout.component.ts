@@ -1,3 +1,12 @@
+/*
+Title: Nodebucket
+Author: Erica Perry
+Date:03/20/21
+Description: 
+*/
+
+/* base-layout up and runnig */
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
