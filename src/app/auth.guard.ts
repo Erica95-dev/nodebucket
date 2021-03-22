@@ -1,3 +1,10 @@
+/*
+Title: Nodebucket
+Author: Erica Perry
+Date:03/20/21
+Description: 
+*/
+
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router} from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
@@ -10,7 +17,8 @@ export class AuthGuard implements CanActivate {
   constructor(private router: Router, private cookieService: CookieService) {
 
   }
-
+  
+/* creating an CanActivate with an if, else statement */
   canActivate(route: ActivatedRouteSnapshot,state: RouterStateSnapshot) {
 
      const sessionUser = this.cookieService.get('session_user');
