@@ -1,3 +1,11 @@
+/*
+Title: Nodebucket
+Author: Erica Perry
+Date:03/20/21
+Description: nosql data structure
+*/
+
+/* all imports used in the app */
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
