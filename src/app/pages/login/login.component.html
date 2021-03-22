@@ -1,7 +1,15 @@
+<!--
+Title: Nodebucket
+Author: Erica Perry
+Date:03/20/21
+Description: html
+-->
+
 <div fxlayout="column">
 
   <mat-card class="mat-elvation-z0">
-
+    
+<!-- employee login place -->
     <mat-card-title>Employee Login Form</mat-card-title>
     <mat-card-subtitle> You must enter a valid numerical employeeId to proceed.</mat-card-subtitle>
 
@@ -12,9 +20,11 @@
           <ng-container *ngIf="errorMessage">
             {{ errorMessage }}
           </ng-container>
-
+          
+ <!-- creating a form login -->
           <form [formGroup]="loginForm" (ngSubmit)="login(); loginForm.reset()" #loginForm="ngForm">
 
+            <!-- creating a place holder of "employee ID which will automatically display in the the form box before any information is entered-->
             <mat-card-content>
 
               <input matInput [formControl]="loginForm.controls['empId']" placeholder="Employee ID" />
@@ -32,7 +42,8 @@
           </form>
         </mat-card>
       </mat-card-content>
-
+    
+<!-- creeated a raised summit button -->
       <mat-card-actions align="end">
         <button type="submit" fxFlex mat-raised-button [disabled]="!loginForm.valid" color="primary">Submit</button>
       </mat-card-actions>
