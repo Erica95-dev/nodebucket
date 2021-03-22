@@ -1,4 +1,15 @@
+/*
+Title: Nodebucket
+Author: Erica Perry
+Date:03/20/21
+Description: home component.ts
+*/
+
+
+/* imports */
 import { Component, OnInit } from '@angular/core';
+
+/* made sure all compents were accurate placed(right folders) */
 
 @Component({
   selector: 'app-home',
