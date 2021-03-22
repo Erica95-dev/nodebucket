@@ -1,3 +1,10 @@
+/*
+Title: Nodebucket
+Author: Erica Perry
+Date:03/20/21
+Description: 
+*/
+
 /**
  * This file includes polyfills needed by Angular and is loaded before the app.
  * You can add your own extra polyfills to this file.
