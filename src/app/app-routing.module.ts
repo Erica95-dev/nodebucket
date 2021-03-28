@@ -4,7 +4,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthLayoutComponent} from './shared/auth-layout/auth-layout.component';
 import { LoginComponent } from './pages/login/login.component';
-import { AuthGuard } from './auth.guard';
+import { AuthGuard } from './shared/auth.guard';
+
 
 
 const routes: Routes = [

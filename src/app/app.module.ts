@@ -15,6 +15,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './pages/login/login.component';
 import {MatCardModule} from '@angular/material/card';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
+
+
 
 @NgModule({
   declarations: [
@@ -36,7 +40,10 @@ import {MatCardModule} from '@angular/material/card';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    MatCardModule
+    MatCardModule,
+    MatSnackBarModule,
+    HttpClient,
+    mongoose
     
     
   ],

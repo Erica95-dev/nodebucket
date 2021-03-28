@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, } from '@angular/router';
 import { CookieService} from 'ngx-cookie-service';
 import { HttpClient, HttpClientModule} from '@angular/common/http';
+import { MatSnackBar } from '@angular/material/snack-bar';
+
 
 
 @Component({
@@ -13,9 +15,9 @@ import { HttpClient, HttpClientModule} from '@angular/common/http';
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
-  errorMessage: string;
-
-  constructor(private fb: FormBuilder, private router: Router, private cookieService: CookieService, private http: HttpClient ) { }
+  
+  constructor(private fb: FormBuilder, private router: Router, private cookieService: CookieService, 
+    private http: HttpClient,private snackBar: MatSnackBar ) { }
 
   ngOnInit(): void {
 
@@ -26,16 +28,31 @@ export class LoginComponent implements OnInit {
 
 login() {
   const empId = this.loginForm.controls['empId'].value;
+  console.log(empId);
 
   this.http.get('/api/employees/' + empId).subscribe(res => {
-    if(res['data']) {
+    if(res['data']) 
+    {
       this.cookieService.set('session_user', empId, 1);
       this.router.navigate(['/']);
     }
-    else{
-      this.errorMessage = res['message'];
-    
+    else if (!(res['data']) && (res['httpCode'] === '200'))
+    {
+       this.openSnackBar('Invalid employeeId, please try again', 'WARNING');
     }
+    else
+    {
+      this.openSnackBar(res['message'], 'ERROR');
+    }
+  })
+}
+
+
+openSnackBar(message: string, notificationType: string) : void
+{
+  this.snackBar.open(message, notificationType, {
+    duration: 3000,
+    verticalPosition: 'top'
   })
 }
 }
