@@ -1,3 +1,14 @@
+/*Title: employee
+ * Author: Erica Perry
+ * Date:3/25/21
+ * Description: employee modules
+ */
+
+/*
+* import
+* export class
+*/
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
