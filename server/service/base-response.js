@@ -1,3 +1,11 @@
+/*
+Title: baseresponse
+ * Author: Erica Perry
+ * Date:3/25/21
+ * Description: baseresponse
+ */
+
+
 class BaseResponse
 {
     /**
