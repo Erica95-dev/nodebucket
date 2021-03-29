@@ -1,3 +1,10 @@
+/*
+ Title: employee-routes
+ * Author: Erica Perry
+ * Date:3/25/21
+ * Description: employee routes
+ */
+ 
 const express = require('express');
 const Employee = require('../db-modules/employee');
 const BaseResponse = require('../service/base-response');
