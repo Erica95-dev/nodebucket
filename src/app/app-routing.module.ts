@@ -1,3 +1,11 @@
+/*Title: app-routing
+ * Author: Erica Perry
+ * Date:3/25/21
+ * Description: app-routing
+ */
+
+/* required imports */
+
 import { HomeComponent } from './pages/home/home.component';
 import { BaseLayoutComponent } from './shared/base-layout/base-layout.component';
 import { NgModule } from '@angular/core';
@@ -7,6 +15,9 @@ import { LoginComponent } from './pages/login/login.component';
 import { AuthGuard } from './shared/auth.guard';
 
 
+/**
+* constructor routes
+*/
 
 const routes: Routes = [
   {
