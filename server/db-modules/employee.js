@@ -1,3 +1,11 @@
+/*
+ * Title: employee
+ * Author: Erica Perry
+ * Date:3/25/21
+ * Description: employee modules
+ */
+
+/* creating a mongoose schema for my employees to modify how they should be */
 const mongoose = require('mongoose');
 const Item = require('./items')
 const Employee = require('./employee');
