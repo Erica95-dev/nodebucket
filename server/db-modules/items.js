@@ -1,3 +1,11 @@
+ /*
+Title: items
+ * Author: Erica Perry
+ * Date:3/25/21
+ * Description: items modules
+ */
+ 
+/* creating and Items schema for how I want my items to be */
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
