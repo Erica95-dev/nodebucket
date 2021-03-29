@@ -1,3 +1,11 @@
+/*Title: login ts
+ * Author: Erica Perry
+ * Date:3/25/21
+ * Description: login
+ */
+
+/* required imports*/
+
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, } from '@angular/router';
@@ -15,6 +23,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
+  
+  /* constructor */
   
   constructor(private fb: FormBuilder, private router: Router, private cookieService: CookieService, 
     private http: HttpClient,private snackBar: MatSnackBar ) { }
