@@ -1,3 +1,9 @@
+/*Title: auth.guard
+ * Author: Erica Perry
+ * Date:3/25/21
+ * Description: auth
+ */
+
 import { TestBed } from '@angular/core/testing';
 
 import { AuthGuard } from './auth.guard';
