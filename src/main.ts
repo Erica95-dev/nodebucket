@@ -1,3 +1,9 @@
+/*Title: main
+ * Author: Erica Perry
+ * Date:3/25/21
+ * Description: main
+ */
+ 
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
