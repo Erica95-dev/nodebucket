@@ -1,3 +1,10 @@
+/*Title: app.module
+ * Author: Erica Perry
+ * Date:3/25/21
+ * Description: app.module
+ */
+
+/* required imports */
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
