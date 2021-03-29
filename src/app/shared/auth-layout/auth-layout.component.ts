@@ -1,7 +1,7 @@
-/*Title: employee
+/*Title: auth-layout
  * Author: Erica Perry
  * Date:3/25/21
- * Description: employee modules
+ * Description: auth
  */
 
 /*
