@@ -1,3 +1,17 @@
+/*
+Title: home
+ * Author: Erica Perry
+ * Date:3/25/21
+ * Description: home
+ */
+
+
+/*
+* imports 
+* export class*
+*/
+
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
