@@ -5,15 +5,15 @@ Title: items
  * Description: items modules
  */
  
-/* creating and Items schema for how I want my items to be */
+// How to map to the employee
 const mongoose = require('mongoose');
-
+// Create a new item schema, define fields, templates for documents in collections   
 const Schema = mongoose.Schema;
 
+//create model and specify which collection in the database to connect it to
 let itemSchema = new Schema ({
-    text: { type: String },
-    dueDate: {type: String }
+    text: { type: String }
 });
 
+// Accesible throughout the application 
 module.exports = itemSchema;
-

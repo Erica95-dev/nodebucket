@@ -15,30 +15,27 @@ class BaseResponse
      * @param {*} data  you can only return an actual data object or null; this is intended to help the UI handle requests
      */
 
-    constructor(httpCode,message,data)
+    constructor(httpCode, message, data, timestamp)
 
     {
-        
         this.httpCode = httpCode;
         this.message = message;
         this.data = data;
-        this.timestamp = new Date().toLocaleDateString('en-US');
+        this.timestamp = timestamp;
     }
     /**
      * Description: toObject function, part of the BaseResponse class
      * @returns new object literal with all of the BaseResponse fields (httpcode, message, data, timestamp)
      */
-toObject()
-{
-
+toObject(){
 return{
+
     'httpCode': this.httpCode,
     'message': this.message,
     'data': this.data,
-    'timestamp': this.timestamp
-}
+    'timestamp': new Date().toLocaleDateString('en-US')
+    }
+  }
 }
 
-
-}
 module.exports = BaseResponse;

@@ -10,14 +10,14 @@ import { HomeComponent } from './pages/home/home.component';
 import { BaseLayoutComponent } from './shared/base-layout/base-layout.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AuthLayoutComponent} from './shared/auth-layout/auth-layout.component';
+import { AuthLayoutComponent } from './shared/auth-layout/auth-layout.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AuthGuard } from './shared/auth.guard';
+import { ErrorComponent } from './pages/error/error.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
 
 
-/**
-* constructor routes
-*/
+
 
 const routes: Routes = [
   {
@@ -27,22 +27,38 @@ const routes: Routes = [
       {
         path: '',
         component: HomeComponent,
-        canActivate:[AuthGuard]
+        canActivate: [AuthGuard]
+      },
+      {
+        path: 'about',
+        component: AboutUsComponent
       }
     ]
-
   },
   {
-path:'session',
-component: AuthLayoutComponent,
-children: [
+    path: 'session',
+    component: AuthLayoutComponent,
+    children: [
+      {
+        path: 'login',
+        component: LoginComponent
+      },
+      {
+        path: 'error',
+        component: ErrorComponent
+      }
+    ]
+  },
+
+    
   {
-    path: 'login',
-    component: LoginComponent
-   }
-  ]
- }
+    path: '**',
+    redirectTo: 'session/error'
+  }
 ];
+
+
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { useHash: true, enableTracing: false, scrollPositionRestoration: 'enabled', relativeLinkResolution: 'legacy' })],

@@ -1,0 +1,23 @@
+* {
+    margin: 0 auto;
+}
+
+.main-container {
+    width:50%;
+    margin: 0 auto;
+}
+.mat-card-content {
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+}
+a {
+    text-align: center;
+    font-size: 8px;
+}
+
+img{
+    background-image:url(/assets/404.png);
+    
+
+}
