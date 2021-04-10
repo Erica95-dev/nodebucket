@@ -11,8 +11,8 @@ class BaseResponse
     /**
      * 
      * @param {*} httpCode string http status code
-     * @param {*} message Message you want the user to see
-     * @param {*} data  you can only return an actual data object or null; this is intended to help the UI handle requests
+     * @param {*} What you what the users to see
+     * @param {*} data you can only return an actual data object or null; this is intended to help the UI handle requests
      */
 
     constructor(httpCode, message, data, timestamp)
