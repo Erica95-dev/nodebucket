@@ -5,14 +5,6 @@
  * Description: employee routes
  */
 
-//const express = require('express');
-//const Employee = require("../db-modules/employee");
-//const BaseResponse = require('../service/base-response');
-//const Items = require('../db-modules/items');
-
-//const router = express.Router();
-
-//http://localhost:3000/api/employees/:empId
 
 /*
 http://localhost:3000/api/employees
@@ -20,296 +12,7 @@ http://localhost:3000/api/employees/:empId
 http://localhost:3000/api/employees
 http://localhost:3000/api/employees/:empId
 http://localhost:3000/api/employees/:empId
-
-
-
-
-/**
- * * API: findEmployeeById
- * @param empId
- * @returns Employee document or null
- */
-
-//FindEmployeeById
-//router.get('/:empId', async (req, res) => {
-//console.log('empId: '+req.params.empId );
-    //try {
-       // Employee.findOne({ 'empId': req.params.empId }, function (err, employee) {
-
-            //if (err) {
-              //  console.log(err);
-
-               // const mongoDBErrorResponse = new BaseResponse('500', `MongoDB Native Error: ${err}`, null);
-
-               // res.json(mongoDBErrorResponse.toObject());
-
-           // }
-          //  else {
-              //  console.log(employee);
-
-              //  const employeeResponse = new BaseResponse('200', 'Successful query', employee);
-
-             //   res.json(employeeResponse.toObject());
-          //  }
-
-       // })
-
-   // }
-   // catch (e) {
-
-       // console.log(e);
-       // const findEmployeeCatchError = new BaseResponse('500', `Internal Server Error: ${e.message}`, null)
-      //  res.json(findEmployeeCatchError.toObject());
-
-  //  }
-//})
-/**
- * API: createTask
- */
-//router.post('/:empId/tasks', async (req, res) => {
-
-    //try {
-
-       // console.log(req.params)
-       // Employee.findOne({ 'empId': req.params.empId }, function (err, employee) {
-
-          //  if (err) {
-                //console.log(err);
-
-               // const createTaskMongoDbError = new BaseResponse('500', `MongoDB Exception: ${err.messae}`, null)
-
-               // res.status(500).send(createTaskMongoDbError.toObject());
-            //} else {
-             //   console.log("Inside else statement of create Task API");
-             //   console.log(employee);
-               // console.log(req.params.empId);
-
-                //checks to see if employee exists
-
-               // if(employee){
-
-
-                //const item = {
-                //    text: req.body.text
-               // };
-
-               // employee.todo.push(item);
-               // console.log(item)
-               // employee.save(function (err, updatedEmployee) {
-
-                  //  if (err) {
-                      //  console.log(err);
-
-                       // const createTaskOnSaveMongoDbError = new BaseResponse('500', `MongoDB onSave() exception: ${err.message}`, null);
-
-                        //res.status(500).send(createTaskOnSaveMongoDbError.toObect());
-
-                    //} else {
-                        //console.log(updatedEmployee);
-
-                       // const createTaskOnSaveSuccessResponse = new BaseResponse('200', 'Successful Query', updatedEmployee);
-
-                       // res.status(200).send(createTaskOnSaveSuccessResponse.toObject());
-                    //}
-                        
-                //})
-               //}
-       // }
-    //})
-
-        
-    
-//} catch (e) {
-     //   console.log(e);
-   // }
-//});
-
-
-/**
- * API: findAllTask
- * 
- */
-
-//router.get('/:empId/tasks', async (req, res) => {
-    //console.log ("/empId/tasks", req.params.empId);
-    //try {
-     //  Employee.findOne({empId: req.params.empId}, 'empId todo done', function (err, employee) {
-            //Employee.find().toArray(function (err, employee) {
-            //if (err) {
-                //console.log(err)
-
-               // const mongoDBFindAllTasksException = new BaseResponse('500', `Internal server error ${err.message}`, null);
-
-               // res.status(500).send(mongoDBFindAllTasksException.toObject());
-           // }
-           // else {
-              //  console.log(employee);
-               // res.json(employee);
-               // res.end();
-                //const employeeTaskResponse = new BaseResponse('200', 'Query successful', employee);
-                //res.status('200').send(employeeTaskResponse.toObject());
-           // }
-
-
-
-       // })
-    //}
-    //catch (e) {
-      //  console.log(e)
-
-       // const errorCatchResponse = new BaseResponse('500', `Internal server error ${e.message}`, null);
-
-        //res.status(500).send(errorCatchResponse.toObject());
-   // }
-
-//})
-
-/**
-* API:updateTask
 */
-
-//router.put('/:empId/tasks', async (req, res) => {
-    //try {
-
-        //Employee.findOne({ 'empId': req.params.empId }, function (err, employee) {
-            //if (err) {
-               // console.log(err);
-
-                //const updateTaskMongodbException = new BaseResponse('500', `Internal server error ${e.message}`, null);
-
-                //res.status(500).send(updateTaskMongodbException.toObject());
-           // }
-            //else {
-                //console.log(employee);
-
-                //if (employee) {
-
-                   // employee.set({
-                       // todo: req.body.todo,
-                       // done: req.body.done
-                    //});
-
-                   // employee.save(function (err, updatedEmployee) {
-                        //if (err) {
-
-                            //console.log(err);
-                           // const updateTaskMongoDbError = new BaseResponse('200', `Internal server error ${e.message}`, null);
-                            //res.status(500).send(updateTaskMongoDbError.toOgject());
-                        //}
-                        //else {
-                           // console.log(updatedEmployee);
-                           // const updatedTaskSuccessResponse = new BaseResponse('200', 'Query successful', updatedEmployee);
-                           // res.status(200).send(updatedTaskSuccessResponse.toObject());
-                        //}
-
-                    //})
-                //}
-
-               // else {
-
-                   // console.log(`Invalid employeeId! The passed-in value was ${req.paramas.empId}`);
-
-                   // const invalidEmployeeIdResponse = new BaseResponse('200', 'Invalid employeeId', null);
-
-                   // res.status(200).send(invalidEmployeeIdResponse.toObect());
-                //}
-
-            //}
-        //})
-   //}
-   // catch (e) {
-      //  console.login(e);
-
-       // const updateTaskCatchResponse = new BaseResponse('500', `Internal server error ${e.message}`, null);
-
-        //res.status(500).send(updateTaskCatchResponse.toObject());
-   // }
-//})
-
-/**
- * API: deleteTask
- */
-
-//router.delete('/:empId/tasks/:taskId', async (req, res) => {
-   // try {
-        //Employee.findOne({ 'empId': req.params.empId }, function (err, employee) {
-          //  if (err) {
-               // console.log(err);
-
-                //const deleteTaskMongoDBError = new BaseResponse('500', `Internal server error${e.message}`, null);
-
-                //res.status(500).send(deleteTaskMongoDBError.toObject());
-
-           // }
-            //else {
-               // console.log(employee);
-
-               // const todoItem = employee.todo.find(item => item._id.toString() === req.params.taskId);
-
-                //const doneItem = employee.done.find(item => item._id.toString() === req.params.taskId);
-
-                //if (todoItem) {
-                 //   console.log(todoItem);
-
-                    //employee.todo.id(todoItem._id).remove();
-
-                   // employee.save(function (err, updatedTodoItemEmployee) {
-                       // if (err) {
-                        //    console.log(err);
-                          //  const deleteTodoItemMongodbError = new BaseResponse('500', `Internal Error ${e.message}`, null);
-                           // res.status(500).send(deleteTodoItemMongodbError.toObjet());
-                       // }
-                       // else {
-
-                           // console.log(updatedTodoItemEmployee);
-
-                            //const deleteTodoItemSuccess = new BaseResponse('200', 'Query successful', updatedTodoItemEmployee);
-                           // res.status(200).send(deleteTodoItemSuccess.toObject());
-
-                        //}
-                    //})
-
-                //}
-                //else if (doneItem) {
-                    //console.log(doneItem)
-
-                    //employee.done.id(doneItem._id).remove();
-
-                    //employee.save(function (err, updatedDoneItemEmployee) {
-                      //  if (err) {
-                          //  console.log(err);
-                           // const deleteDoneItemMongodbError = new BaseResponse('500', ` Internal server error ${err.message}`, null);
-                            //res.status(500).send(deleteDoneItemMongodbError.toObject());
-                        //}
-                        //else {
-                           // console.log(updatedDoneItemEmployee);
-                           // const deleteDoneItemSuccess = new BaseResponse('200', 'Query successful', updatedDoneItemEmpoyee);
-                          //  res.status(200).send(deleteDoneItemSuccess.toObject());
-
-                       // }
-                    //})
-
-                //}
-                //else {
-                   // console.log (`Invalid taskID! Passed in value ${req.params.taskId}`);
-                    //const invalidTaskResponse = new BaseResponse('200', 'Invalid taskId', null);
-                   // res.status(200).send(invalidTaskResponse.toObject());
-                    //code goes here
-                //}
-
-            //}
-
-       // })
-   // }
-   // catch (e) {
-       // console.log(e);
-
-       // const deleteTaskCatchError = new BaseResponse('500', `Internal server error ${e.message}`, null);
-
-       // res.status(500).send(deleteTaskCatchError.toObject());
-   // }
-//})
-
 
 
 //module.exports = router;
@@ -329,12 +32,12 @@ API: findEmployeeId
 //FindEmployeeById API-test passed
 router.get('/:empId', async(req, res) => {
     // error handling 
-    // when we do not have a catch error
+    
     try {
-        // stored in the params -- 1007-1012
-        // Callback of the response for and error assiocate with the cluster errors, any collection goes into the second arguement  
+        
+         
         Employee.findOne({'empId':req.params.empId}, function(err, employee){
-            // database level error message 
+            
             if(err){
                 console.log(err); //log file or database, to tracking any process or errors and what message was received 
                 const mongoDBErrorResponse = new BaseResponse('500', `MongoDB native Error: ${err}`, null) //base response message  
@@ -348,7 +51,7 @@ router.get('/:empId', async(req, res) => {
             }
         })
     } 
-    // if error then it will define this code.
+    // if error then it will then this code would take effect
     catch (e) {
         console.log(e);
         const findEmployeeCatchError = new BaseResponse('500', `Internal Server Error: ${e.message}`, null)
@@ -446,7 +149,7 @@ router.get('/:empId/tasks', async(req, res) => {
 router.put('/:empId/tasks', async(req, res) => {
     try 
     {
-        // Filtering by the empId.
+        // Finding by the Employee ID
         Employee.findOne({'empId': req.params.empId}, function(err,employee)
     {
         // If error from MongoDB, log it 
@@ -458,11 +161,11 @@ router.put('/:empId/tasks', async(req, res) => {
             // return to the client.
             res.status(500).send(updateTaskMongodbException.toObject());
         } 
-        // No error check validity 
+        
         else 
         { 
             console.log(employee);
-            // If the employee is not empty
+            // If no data is present in the employee
             if(employee)
             {
                 // This is setting the todo and done to the request body
@@ -470,15 +173,15 @@ router.put('/:empId/tasks', async(req, res) => {
                     todo:req.body.todo,
                     done: req.body.done
                 });
-                //  Save the record to mongoDB 
+                //  It would be saved to MongoDb
                 employee.save(function(err, updatedEmployee) {
                     // Server-side error
                     if (err) 
                     {
                         console.log(err);
-                        // Capture the error  
+                         
                         const updateTaskMongDbError = new BaseResponse('200',  `Internal server error ${e.message}`, null);
-                        // Return it to the server 
+                        
                         res.status(500).send(updateTaskMongDbError.toObject());
                     }
                     // No error
@@ -514,7 +217,7 @@ router.put('/:empId/tasks', async(req, res) => {
 })
 
 // Api: deleteTask
-// API CALL using the delete protocol, filtering by the :empid, and passing in :taskid to look for in our data set 
+ 
 router.delete('/:empId/tasks/:taskId', async(req, res) => {
     try {
         // Find employee record
@@ -533,7 +236,7 @@ router.delete('/:empId/tasks/:taskId', async(req, res) => {
             {
                 // Log the employee record.
                 console.log(employee);
-                // Looping over the data to see if taskid exists inside the todo array 
+                
                 const todoItem = employee.todo.find(item => item._id.toString() === req.params.taskId);
                 // Looping over the data to see if taskid exists inside the done array 
                 const doneItem = employee.done.find(item => item._id.toString() === req.params.taskId);
@@ -542,9 +245,9 @@ router.delete('/:empId/tasks/:taskId', async(req, res) => {
                 {
                     // Log it to the console.
                     console.log(todoItem);
-                    // If its not empty, remove it from the existing array
+                    
                     employee.todo.id(todoItem._id).remove();
-                    // Save it to mongoDB.
+                    // save to my database(MongoBd).
                     employee.save(function(err, updatedTodoItemEmployee) {
                         if (err) 
                         {
@@ -567,7 +270,7 @@ router.delete('/:empId/tasks/:taskId', async(req, res) => {
                     console.log(doneItem);
                     // If its not empty, remove it from the existing array 
                     employee.done.id(doneItem._id).remove();
-                    // Save it to mongoDB.
+                    // Save to my database(mongoDb).
                     employee.save(function(err, updatedDoneItemEmployee) {
                         if(err)
                         {
