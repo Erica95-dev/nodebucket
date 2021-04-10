@@ -10,6 +10,7 @@
     "server": "nodemon ./server/app.js",
     "start": "ng serve",
     "localhost": "ng build && node ./server/app.js",
+    "heroku-postbuild": "ng build --configuration=production",
     "postinstall": "ngcc"
   },
   "private": true,
@@ -55,5 +56,9 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.0.2"
+  },
+  "engines": {
+    "npm": "6.14.x",
+    "node": "12.18.x"
   }
 }
