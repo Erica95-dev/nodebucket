@@ -1,3 +1,10 @@
+/*
+Title: items
+ * Author: Erica Perry
+ * Date:3/25/21
+ * Description: items modules
+ */ 
+ 
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
