@@ -10,8 +10,8 @@
     "server": "nodemon ./server/app.js",
     "start": "ng serve",
     "localhost": "ng build && node ./server/app.js",
-    "heroku-postbuild": "ng build --configuration=production",
-    "postinstall": "ngcc"
+   "heroku-postbuild": "ng build --configuration=production",
+    //"postinstall": "ngcc"
   },
   "private": true,
   "dependencies": {
